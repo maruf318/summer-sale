@@ -42,7 +42,7 @@
             <p class="py-6 text-2xl font-medium">
               Use Promo Code
               <button
-                class="btn btn-primary text-2xl font-semibold bg-[#E527B2] text-white border-none"
+                class="btn btn-primary text-2xl font-semibold rounded-lg bg-[#E527B2] text-white border-none cursor-default hover:bg-[#E527B2]"
               >
                 Sell200
               </button>
@@ -51,8 +51,165 @@
         </div>
       </div>
     </header>
-    <main>
-      <h1>Summer Sale</h1>
+    <main class="px-4 bg-[#F8F8F8]">
+      <h1 class="text-4xl font-semibold">Kitchenware</h1>
+      <div class="flex flex-col lg:flex-row">
+        <div class="w-3/4">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+            <!-- First Card -->
+            <div
+              onclick="cardClicked('spoon-id')"
+              class="card w-60 bg-base-100 shadow-xl"
+            >
+              <figure class="px-10 pt-10 rounded-lg pb-6 m-4 bg-[#1111110C]">
+                <img src="./images/prod1.png" alt="Shoes" class="rounded-xl" />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">Shoes!</h2>
+                <p class="text-xl font-semibold">Spoon</p>
+                <p class="text-[#1111117F]">
+                  <span id="spoon-id">39.00</span>TK
+                </p>
+              </div>
+            </div>
+            <!-- Second Card -->
+            <div
+              onclick="cardClicked('board-id')"
+              class="card w-60 bg-base-100 shadow-xl"
+            >
+              <figure class="px-10 pt-10 rounded-lg pb-6 m-4 bg-[#1111110C]">
+                <img src="./images/prod2.png" alt="Shoes" class="rounded-xl" />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">Shoes!</h2>
+                <p class="text-xl font-semibold">Chopping Board</p>
+                <p class="text-[#1111117F]">
+                  <span id="board-id">25.00</span>TK
+                </p>
+              </div>
+            </div>
+            <!-- Third Card -->
+            <div
+              onclick="cardClicked('cooker-id')"
+              class="card w-60 bg-base-100 shadow-xl"
+            >
+              <figure class="px-10 pt-10 rounded-lg pb-6 m-4 bg-[#1111110C]">
+                <img src="./images/prod3.png" alt="Shoes" class="rounded-xl" />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">Shoes!</h2>
+                <p class="text-xl font-semibold">Rice Cooker</p>
+                <p class="text-[#1111117F]">
+                  <span id="cooker-id">49.00</span>TK
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- 2nd part: Sport wear section -->
+          <h1 class="text-4xl font-semibold">Sportswear</h1>
+          <div
+            class="grid grid-cols-1 mt-4 md:grid-cols-2 lg:grid-cols-3 gap-2"
+          >
+            <!-- First Card -->
+            <div
+              onclick="cardClicked('cap-id')"
+              class="card w-60 bg-base-100 shadow-xl"
+            >
+              <figure class="px-10 pt-10 rounded-lg pb-6 m-4 bg-[#1111110C]">
+                <img src="./images/prod4.png" alt="Shoes" class="rounded-xl" />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">Shoes!</h2>
+                <p class="text-xl font-semibold">Sports cap</p>
+                <p class="text-[#1111117F]"><span id="cap-id">39.00</span>TK</p>
+              </div>
+            </div>
+            <!-- Second Card -->
+            <div
+              onclick="cardClicked('jersey-id')"
+              class="card w-60 bg-base-100 shadow-xl"
+            >
+              <figure class="px-10 pt-10 rounded-lg pb-6 m-4 bg-[#1111110C]">
+                <img src="./images/prod5.png" alt="Shoes" class="rounded-xl" />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">Shoes!</h2>
+                <p class="text-xl font-semibold">Full Jersey set</p>
+                <p class="text-[#1111117F]">
+                  <span id="jersey-id">39.00</span>TK
+                </p>
+              </div>
+            </div>
+            <!-- Third Card -->
+            <div
+              onclick="cardClicked('shoes-id')"
+              class="card w-60 bg-base-100 shadow-xl"
+            >
+              <figure class="px-10 pt-10 rounded-lg pb-6 m-4 bg-[#1111110C]">
+                <img src="./images/prod6.png" alt="Shoes" class="rounded-xl" />
+              </figure>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">Shoes!</h2>
+                <p class="text-xl font-semibold">Sports Snicker</p>
+                <p class="text-[#1111117F]">
+                  <span id="shoes-id">39.00</span>TK
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 2nd flex -->
+        <div class="grid grid-cols-1 lg: ml-4">
+          <div>
+            <div class="bg-white p-6 mt-4">
+              <h1 class="text-2xl text-black font-medium">Have Coupon?</h1>
+              <p>
+                <input
+                  class="p-[11px] rounded-l-lg border-2 border-neutral-200 border-r-0 lg:w-32"
+                  type="text"
+                  name=""
+                  id="coupon-id"
+                  placeholder="Coupon code"
+                /><button
+                  onclick="coupon()"
+                  id="btn-coupon"
+                  class="px-4 py-[10px] text-xl font-semibold rounded-r-lg bg-[#E527B2] text-white border-none"
+                >
+                  Apply
+                </button>
+              </p>
+            </div>
+            <div class="mt-6 bg-white p-6">
+              <div id="place-here">
+                <!-- <h1>Insert here</h1> -->
+              </div>
+              <hr />
+              <h1 class="text-2xl font-medium">
+                Total price:<span id="price-id" class="text-[#1111117F]"
+                  >0</span
+                >
+              </h1>
+              <h1 class="text-2xl font-medium">
+                Discount:<span id="discount-id" class="text-[#1111117F]"
+                  >0</span
+                >
+              </h1>
+              <h1 class="text-2xl font-medium">
+                Total: <span class="text-[#1111117F]">0</span>
+              </h1>
+              <hr />
+              <button
+                onclick="purchase()"
+                id="btn-purchase"
+                class="px-4 py-3 text-white font-semibold rounded-lg border-none bg-[#E527B2] mt-2"
+              >
+                Make Purchase
+              </button>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
     </main>
     <script src="./js/calculation.js"></script>
   </body>
