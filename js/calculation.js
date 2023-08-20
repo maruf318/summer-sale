@@ -8,8 +8,6 @@ function cardClicked(id) {
   const stringValuePast = document.getElementById(id);
   const stringValue = stringValuePast.innerText;
   const productPrice = parseFloat(stringValue);
-  const totalPriceString = document.getElementById("price-id").innerText;
-  const totalPrice = parseFloat(totalPriceString);
   const productName =
     stringValuePast.parentNode.parentNode.childNodes[3].innerText;
   total = total + productPrice;
@@ -36,7 +34,6 @@ function cardClicked(id) {
 function addToTotal() {
   const totalString = document.getElementById("price-id").innerText;
   const total = parseFloat(totalString);
-  const price = document.getElementById("price-id");
   const discountString = document.getElementById("discount-id").innerText;
   const discount = parseFloat(discountString);
   const finalPrice = total - discount;
@@ -76,10 +73,7 @@ function getElement(id) {
   const value = parseFloat(valueString);
   return value;
 }
-function purchase() {
-  const totalPrice = getElement("price-id");
-  console.log(totalPrice);
-}
+
 function homeId() {
   document.getElementById("discount-id").innerText = "0";
   document.getElementById("price-id").innerText = "0";
