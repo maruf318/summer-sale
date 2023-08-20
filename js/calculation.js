@@ -19,29 +19,41 @@ function cardClicked(id) {
   if (total > 0) {
     button2.disabled = false;
   } else button2.disabled = true;
+
   addToPrice(productName, total.toFixed(2));
-  // const price = document.getElementById("price-id");
-  // price.innerText = total;
-  // const p = document.createElement("p");
-  // const count = price.childElementCount;
-  // p.innerHTML = `${count + 1}. ${productName}`;
-  // // li.innerText = productName;
-  // const placeToKeep = document.getElementById("place-here");
-  // placeToKeep.appendChild(p);
-  // return productPrice.toFixed(2);
+  addToTotal();
+
+  const couponCode = document.getElementById("coupon-id").value;
+  if (total > 200 && couponCode == "SELL200") {
+    const value = getElement("price-id");
+    const discountValue = value * 0.2;
+    const discountValueFixed = discountValue.toFixed(2);
+    document.getElementById("discount-id").innerText = discountValueFixed;
+    const finalPrice = value - discountValueFixed;
+    document.getElementById("total-id").innerText = finalPrice.toFixed(2);
+  }
+}
+function addToTotal() {
+  const totalString = document.getElementById("price-id").innerText;
+  const total = parseFloat(totalString);
+  const price = document.getElementById("price-id");
+  const discountString = document.getElementById("discount-id").innerText;
+  const discount = parseFloat(discountString);
+  const finalPrice = total - discount;
+  const finalPriceFixed = finalPrice.toFixed(2);
+
+  document.getElementById("total-id").innerText = finalPriceFixed;
 }
 
 function addToPrice(productName, value) {
   const price = document.getElementById("price-id");
-  const price1 = price.parentNode.childNodes[1];
 
   price.innerText = value;
   const p = document.createElement("p");
-  // const count = price1.childElementCount;
   count++;
 
   p.innerHTML = `${count}. ${productName}`;
-  // li.innerText = productName;
+
   const placeToKeep = document.getElementById("place-here");
   placeToKeep.appendChild(p);
 }
@@ -53,10 +65,12 @@ function coupon() {
     const discountValue = value * 0.2;
     const discountValueFixed = discountValue.toFixed(2);
     document.getElementById("discount-id").innerText = discountValueFixed;
+    const finalPrice = value - discountValueFixed;
+    document.getElementById("total-id").innerText = finalPrice.toFixed(2);
+    return discountValueFixed;
   } else alert("wrong coupon code");
 }
 
-//get innerText value
 function getElement(id) {
   const valueString = document.getElementById(id).innerText;
   const value = parseFloat(valueString);
@@ -65,8 +79,12 @@ function getElement(id) {
 function purchase() {
   const totalPrice = getElement("price-id");
   console.log(totalPrice);
-  // if (totalPrice > 0) {
-  //   // console.log(totalPrice);
-  //   button2.disabled = false;
-  // } else button2.disabled = true;
+}
+function homeId() {
+  document.getElementById("discount-id").innerText = "0";
+  document.getElementById("price-id").innerText = "0";
+  document.getElementById("total-id").innerText = "0";
+  document.getElementById("coupon-id").value = "";
+  document.getElementById("place-here").innerHTML = " ";
+  window.location.reload();
 }
