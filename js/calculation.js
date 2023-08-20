@@ -11,6 +11,7 @@ function cardClicked(id) {
   const productName =
     stringValuePast.parentNode.parentNode.childNodes[3].innerText;
   total = total + productPrice;
+  //APPLY button condition
   if (total > 200) {
     button1.disabled = false;
   } else button1.disabled = true;
@@ -20,7 +21,7 @@ function cardClicked(id) {
 
   addToPrice(productName, total.toFixed(2));
   addToTotal();
-
+  //Update of the discount value and final price on clicking again a product after adding voucher
   const couponCode = document.getElementById("coupon-id").value;
   if (total > 200 && couponCode == "SELL200") {
     const value = getElement("price-id");
@@ -31,6 +32,7 @@ function cardClicked(id) {
     document.getElementById("total-id").innerText = finalPrice.toFixed(2);
   }
 }
+//calculation to add the total
 function addToTotal() {
   const totalString = document.getElementById("price-id").innerText;
   const total = parseFloat(totalString);
@@ -54,6 +56,7 @@ function addToPrice(productName, value) {
   const placeToKeep = document.getElementById("place-here");
   placeToKeep.appendChild(p);
 }
+//Apply button coupon
 function coupon() {
   const couponCode = document.getElementById("coupon-id").value;
 
@@ -67,13 +70,13 @@ function coupon() {
     return discountValueFixed;
   } else alert("wrong coupon code");
 }
-
+//getting inner text of element
 function getElement(id) {
   const valueString = document.getElementById(id).innerText;
   const value = parseFloat(valueString);
   return value;
 }
-
+//to remove the value and text after clicking home button
 function homeId() {
   document.getElementById("discount-id").innerText = "0";
   document.getElementById("price-id").innerText = "0";
