@@ -62,7 +62,7 @@
             <!-- First Card -->
             <div
               onclick="cardClicked('spoon-id')"
-              class="card w-72 bg-base-100 shadow-xl"
+              class="card w-72 bg-base-100"
             >
               <figure class="px-10 pt-10 rounded-lg pb-6 m-4 bg-[#1111110C]">
                 <img src="./images/prod1.png" alt="Shoes" class="rounded-xl" />
@@ -105,13 +105,15 @@
             <!-- Second Card -->
             <div
               onclick="cardClicked('board-id')"
-              class="card w-72 bg-base-100 shadow-xl"
+              class="card w-72 bg-base-100"
             >
               <figure class="px-10 pt-10 rounded-lg pb-6 m-4 bg-[#1111110C]">
                 <img src="./images/prod2.png" alt="Shoes" class="rounded-xl" />
               </figure>
               <div class="card-body items-center text-center">
                 <div class="rating">
+                  <input type="radio" name="rating-10" class="rating-hidden" />
+
                   <input
                     type="radio"
                     name="rating-1"
@@ -148,7 +150,7 @@
             <!-- Third Card -->
             <div
               onclick="cardClicked('cooker-id')"
-              class="card w-72 bg-base-100 shadow-xl"
+              class="card w-72 bg-base-100"
             >
               <figure class="px-10 pt-10 rounded-lg pb-6 m-4 bg-[#1111110C]">
                 <img src="./images/prod3.png" alt="Shoes" class="rounded-xl" />
@@ -197,10 +199,7 @@
             class="grid grid-cols-1 mt-4 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-20 lg:gap-6"
           >
             <!-- First Card -->
-            <div
-              onclick="cardClicked('cap-id')"
-              class="card w-72 bg-base-100 shadow-xl"
-            >
+            <div onclick="cardClicked('cap-id')" class="card w-72 bg-base-100">
               <figure class="px-10 pt-10 rounded-lg pb-7 m-4 bg-[#1111110C]">
                 <img
                   src="./images/prod4.png"
@@ -238,13 +237,13 @@
                   />
                 </div>
                 <p class="text-xl font-semibold">Sports cap</p>
-                <p class="text-[#1111117F]"><span id="cap-id">39.00</span>TK</p>
+                <p class="text-[#1111117F]"><span id="cap-id">49.00</span>TK</p>
               </div>
             </div>
             <!-- Second Card -->
             <div
               onclick="cardClicked('jersey-id')"
-              class="card w-72 bg-base-100 shadow-xl"
+              class="card w-72 bg-base-100"
             >
               <figure class="px-10 pt-10 rounded-lg pb-6 m-4 bg-[#1111110C]">
                 <img src="./images/prod5.png" alt="Shoes" class="rounded-xl" />
@@ -280,14 +279,14 @@
                 </div>
                 <p class="text-xl font-semibold">Full Jersey set</p>
                 <p class="text-[#1111117F]">
-                  <span id="jersey-id">39.00</span>TK
+                  <span id="jersey-id">69.00</span>TK
                 </p>
               </div>
             </div>
             <!-- Third Card -->
             <div
               onclick="cardClicked('shoes-id')"
-              class="card w-72 bg-base-100 shadow-xl"
+              class="card w-72 bg-base-100"
             >
               <figure class="px-10 pt-10 rounded-lg pb-6 m-4 bg-[#1111110C]">
                 <img src="./images/prod6.png" alt="Shoes" class="rounded-xl" />
@@ -323,7 +322,7 @@
                 </div>
                 <p class="text-xl font-semibold">Sports Snicker</p>
                 <p class="text-[#1111117F]">
-                  <span id="shoes-id">39.00</span>TK
+                  <span id="shoes-id">159.00</span>TK
                 </p>
               </div>
             </div>
@@ -332,7 +331,7 @@
         <!-- 2nd flex -->
         <div class="grid grid-cols-1 lg: ml-4">
           <div>
-            <div class="bg-white p-6 mt-4">
+            <div class="bg-white rounded-lg p-6 mt-4">
               <h1 class="text-2xl text-black font-medium">Have Coupon?</h1>
               <p>
                 <input
@@ -350,7 +349,7 @@
                 </button>
               </p>
             </div>
-            <div class="mt-6 bg-white p-6">
+            <div class="mt-6 bg-white p-6 rounded-lg">
               <div id="place-here" class="text-2xl font-medium mb-4">
                 <!-- <h1>Insert here</h1> -->
               </div>
@@ -375,7 +374,7 @@
                 <button
                   onclick="my_modal_1.showModal()"
                   id="btn-purchase"
-                  class="min-w-full text-xl flex flex- btn btn-secondary lg:-mb-12 capitalize px-4 py-3 text-white font-semibold rounded-lg border-none bg-[#E527B2] mt-2"
+                  class="min-w-full text-xl flex flex- btn btn-secondary lg:-mb-11 capitalize px-4 py-3 text-white font-semibold rounded-lg border-none bg-[#E527B2] mt-2"
                 >
                   Make Purchase
                 </button>
@@ -390,7 +389,7 @@
                       Congratulations
                     </h3>
                     <p class="lg:py-4 text-[#1111117F]">
-                      Your Purchased the product
+                      Your Product is on its way
                     </p>
                     <div class="modal-action">
                       <!-- if there is a button in form, it will close the modal -->
