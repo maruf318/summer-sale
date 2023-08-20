@@ -335,7 +335,7 @@
               <h1 class="text-2xl text-black font-medium">Have Coupon?</h1>
               <p>
                 <input
-                  class="p-[11px] rounded-l-lg border-2 border-neutral-200 border-r-0 lg:w-32"
+                  class="px-2 py-2.5 pt-3 rounded-l-lg border-2 border-neutral-200 border-r-0 lg:w-32"
                   type="text"
                   name=""
                   id="coupon-id"
@@ -343,7 +343,7 @@
                 /><button
                   onclick="coupon()"
                   id="btn-coupon"
-                  class="btn capitalize px-4 py-[10px] text-xl font-semibold rounded-r-lg bg-[#E527B2] rounded-l-none text-white border-none"
+                  class="btn capitalize px-4 py-2 text-xl font-semibold rounded-r-lg bg-[#E527B2] rounded-l-none text-white border-none"
                 >
                   Apply
                 </button>
@@ -353,7 +353,9 @@
               <div id="place-here" class="text-2xl font-medium mb-4">
                 <!-- <h1>Insert here</h1> -->
               </div>
+              <br />
               <hr />
+              <br />
               <div>
                 <h1 class="text-2xl font-medium">
                   Total price:<span id="price-id" class="text-[#1111117F]"
@@ -369,6 +371,7 @@
                   Total: <span id="total-id" class="text-[#1111117F]">0</span
                   ><span class="text-[#1111117F]">TK</span>
                 </h1>
+                <br />
                 <hr />
                 <br />
                 <button
@@ -380,11 +383,7 @@
                 </button>
                 <dialog id="my_modal_1" class="modal">
                   <form method="dialog" class="modal-box text-center">
-                    <img
-                      class="mx-auto lg:py-5"
-                      src="./images/congo.png"
-                      alt=""
-                    />
+                    <img class="mx-auto" src="./images/congo.png" alt="" />
                     <h3 class="font-bold text-xl md:text-2xl lg:text-4xl">
                       Congratulations
                     </h3>
@@ -392,10 +391,9 @@
                       Your Product is on its way
                     </p>
                     <div class="modal-action">
-                      <!-- if there is a button in form, it will close the modal -->
                       <button
                         onclick="homeId()"
-                        class="btn lg:mb-5 btn-secondary capitalize mx-auto text-white"
+                        class="btn lg:mb-2 btn-secondary capitalize mx-auto text-white"
                       >
                         Go Home
                       </button>
