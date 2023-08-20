@@ -50,14 +50,14 @@
         </div>
       </div>
     </header>
-    <main class="lg:px-10 px-4 bg-[#F8F8F8] pb-14">
+    <main class="lg:px-6 px-4 bg-[#F8F8F8] pb-14">
       <h1 class="text-4xl font-semibold p-8 px-10 text-center lg:text-left">
         Kitchenware
       </h1>
       <div class="flex flex-col lg:flex-row">
         <div class="lg:w-3/4">
           <div
-            class="grid gap-4 md:gap-3 lg:gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+            class="grid gap-4 md:gap-10 lg:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
           >
             <!-- First Card -->
             <div onclick="cardClicked('spoon-id')" class="card bg-base-100">
@@ -187,10 +187,10 @@
             Sportswear
           </h1>
           <div
-            class="grid grid-cols-1 mt-4 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-20 lg:gap-6"
+            class="grid grid-cols-1 mt-4 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-10 lg:gap-6"
           >
             <!-- First Card -->
-            <div onclick="cardClicked('cap-id')" class="card w-72 bg-base-100">
+            <div onclick="cardClicked('cap-id')" class="card bg-base-100">
               <figure class="px-10 pt-10 rounded-lg pb-7 m-4 bg-[#1111110C]">
                 <img
                   src="./images/prod4.png"
@@ -232,10 +232,7 @@
               </div>
             </div>
             <!-- Second Card -->
-            <div
-              onclick="cardClicked('jersey-id')"
-              class="card w-72 bg-base-100"
-            >
+            <div onclick="cardClicked('jersey-id')" class="card bg-base-100">
               <figure class="px-10 pt-10 rounded-lg pb-6 m-4 bg-[#1111110C]">
                 <img src="./images/prod5.png" alt="Shoes" class="rounded-xl" />
               </figure>
@@ -275,10 +272,7 @@
               </div>
             </div>
             <!-- Third Card -->
-            <div
-              onclick="cardClicked('shoes-id')"
-              class="card w-72 bg-base-100"
-            >
+            <div onclick="cardClicked('shoes-id')" class="card bg-base-100">
               <figure class="px-10 pt-10 rounded-lg pb-6 m-4 bg-[#1111110C]">
                 <img src="./images/prod6.png" alt="Shoes" class="rounded-xl" />
               </figure>
@@ -320,9 +314,9 @@
           </div>
         </div>
         <!-- 2nd flex -->
-        <div class="grid grid-cols-1 lg: ml-4">
+        <div class="grid grid-cols-1 lg:ml-3">
           <div>
-            <div class="bg-white rounded-lg p-6 mt-4">
+            <div class="bg-white rounded-lg p-6">
               <h1 class="text-2xl text-black font-medium">Have Coupon?</h1>
               <p>
                 <input
@@ -348,17 +342,17 @@
               <hr />
               <br />
               <div>
-                <h1 class="text-2xl font-medium">
+                <h1 class="text-xl font-medium">
                   Total price:<span id="price-id" class="text-[#1111117F]"
                     >0</span
                   ><span class="text-[#1111117F]">TK</span>
                 </h1>
-                <h1 class="text-2xl font-medium py-3">
+                <h1 class="text-xl font-medium py-3">
                   Discount:<span id="discount-id" class="text-[#1111117F]"
                     >0</span
                   ><span class="text-[#1111117F]">TK</span>
                 </h1>
-                <h1 class="text-2xl font-medium">
+                <h1 class="text-xl font-medium">
                   Total: <span id="total-id" class="text-[#1111117F]">0</span
                   ><span class="text-[#1111117F]">TK</span>
                 </h1>
