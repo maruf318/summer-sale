@@ -12,7 +12,7 @@ function cardClicked(id) {
     stringValuePast.parentNode.parentNode.childNodes[3].innerText;
   total = total + productPrice;
   //APPLY button condition
-  if (total > 200) {
+  if (total >= 200) {
     button1.disabled = false;
   } else button1.disabled = true;
   if (total > 0) {
@@ -23,7 +23,7 @@ function cardClicked(id) {
   addToTotal();
   //Update of the discount value and final price on clicking again a product after adding voucher
   const couponCode = document.getElementById("coupon-id").value;
-  if (total > 200 && couponCode == "SELL200") {
+  if (total >= 200 && couponCode == "SELL200") {
     const value = getElement("price-id");
     const discountValue = value * 0.2;
     const discountValueFixed = discountValue.toFixed(2);
